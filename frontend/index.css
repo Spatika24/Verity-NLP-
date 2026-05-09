@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Soft, muted pastel background (slightly warmer off-white) */
+        --background: 0 0% 100%;
+        --foreground: 222 47% 20%;
+
+        /* Clean white for cards */
+        --card: 200 30% 99%;
+        --card-foreground: 222 47% 11%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+
+        /* Soft "Powder Blue" for primary actions */
+        --primary: 185 45% 90%;
+        --primary-foreground: 210 25% 20%;
+
+        --secondary: 210 20% 96%;
+        --secondary-foreground: 222 47% 11%;
+
+        --muted: 210 20% 96%;
+        --muted-foreground: 215 6% 35%;
+
+        --accent: 210 20% 96%;
+        --accent-foreground: 222 47% 11%;
+
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+
+        /* Softened Pastel Stance Colors */
+        --stance-support: 155 35% 65%; /* Sage/Mint Green */
+        --stance-refute: 0 40% 75%; /* Dusty Rose/Coral */
+        --stance-neutral: 42 45% 75%; /* Pale Butter Gold */
+
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 205 35% 78%;
+
+        --radius: 0.85rem;
+    }
+}
+
+@layer base {
+    * {
+        border-color: hsl(var(--border));
+    }
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        /* Main body font: Clean Sans-Serif */
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Apply Noto Serif to the 'Verity' name and main headers */
+    h1,
+    h2,
+    .font-serif {
+        font-family: "Noto Serif", serif;
+        letter-spacing: -0.01em;
+    }
+}
