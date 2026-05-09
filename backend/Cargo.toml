@@ -1,0 +1,35 @@
+[package]
+name = "verity-backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Web Framework
+actix-web = "4.4"
+
+# Async Runtime
+tokio = { version = "1.35", features = ["macros", "rt-multi-thread"] }
+
+# JSON Serialization/Deserialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Qdrant Database Client (Uses gRPC on port 6334)
+qdrant-client = "1.7.0"
+tonic = "0.10"          # Required underlying gRPC library for Qdrant
+
+# ONNX Runtime (for the bi-encoder and cross-encoder models)
+ort = "2.0.0-rc.12"
+
+# Hugging Face tokenizers (to convert strings into token IDs)
+tokenizers = "0.19"
+
+# Multi-dimensional arrays (to feed data into the ONNX models)
+ndarray = "0.15.6"
+
+# Error handling and environment variables
+anyhow = "1.0"
+dotenvy = "0.15"
+
+# Connection pooling
+deadpool = { version = "0.12", features = ["managed"] }
